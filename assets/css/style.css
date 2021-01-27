@@ -1,59 +1,228 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  padding: 15px 0;
 }
 
 .container__row {
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo__link {
-    display: block;
+.header__link {
+  display: block;
 }
 
-.logo__image {
-    width: 128px;
-    display: block;
+.header__image {
+  width: 128px;
+  display: block;
 }
 
 .nav__list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .nav__link {
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #939699;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #939699;
 }
 
 .button {
-    cursor: pointer;
-    background: #4592FF;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: none;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  cursor: pointer;
+  background: #4592FF;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-.button__icon {
-    margin-right: 10px;
+.button__icon,
+.slider .button__text:first-child,
+.card .button__text {
+  margin-right: 10px;
+}
+
+.slider .button,
+.card .button {
+  margin-left: 0; 
+}
+
+.card .button__icon {
+  margin-right: 0;
+}
+
+
+.slide {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+
+.slide-1 {
+  background: #B4D1E0 url('../images/slide-1.png') no-repeat top right 30%;
+  background-size: contain;
+}
+
+.label {
+  background-color: #3DC47E;
+  border-radius: 3px;
+  padding: 5px 12px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.slide__title {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 70px;
+  color: #262D33;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.slide__text {
+  max-width: 335px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #4B5157;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.slider {
+  position: relative; 
+}
+
+.slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.slider__nav .row {
+  justify-content: space-between;
+}
+
+.slider__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card {
+  min-height: 370px;
+  border-radius: 10px;
+  padding-top: 60px;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-bottom: 80px;
+}
+
+.card-1 {
+  background: #e3e3e3 url('../images/card-1.jpg') no-repeat top right;
+  background-size: cover;
+}
+
+.card-2 {
+  background: #e3e3e3 url('../images/card-2.jpg') no-repeat top right;
+  background-size: cover;
+}
+
+.card-3,
+.card-4 {
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+
+.card-3 {
+  background: #CCD5E6 url('../images/card-3.png') no-repeat top right 10%;
+  background-size: contain;
+}
+
+.card-4 {
+  background: #FF4F52 url('../images/card-4.png') no-repeat top right;
+  background-size: contain;
+}
+
+.card-2 .card__title,
+.card-2 .card__text,
+.card-4 .card__title,
+.card-4 .card__text,
+.card-4 .button__text {
+  color: #fff;
+}
+
+.card-2 .card__text {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.card-3 .card__title {
+  max-width: 408px;
+  margin-top: 30px;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.card-3 .card__text {
+  max-width: 420px;
+}
+
+.card-3 .card__title span {
+  display: block;
+}
+
+.card__title {
+  max-width: 222px;
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card__text {
+  max-width: 166px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B5157;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
