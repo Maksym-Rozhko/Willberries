@@ -82,10 +82,21 @@ body {
 .slide {
   padding-top: 90px;
   padding-bottom: 110px;
+  min-height: 568px;
 }
 
 .slide-1 {
   background: #B4D1E0 url('../images/slide-1.png') no-repeat top right 30%;
+  background-size: contain;
+}
+
+.slide-2 {
+  background: #c2e0b4 url('../images/slide-1.png') no-repeat top right 30%;
+  background-size: contain;
+}
+
+.slide-3 {
+  background: #e0b4be url('../images/slide-1.png') no-repeat top right 30%;
   background-size: contain;
 }
 
@@ -129,6 +140,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  z-index: 9;
 }
 
 .slider__nav .row {
@@ -264,6 +276,9 @@ body {
   padding-bottom: 35px;
   padding-left: 35px;
   padding-right: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .goods__card .label {
@@ -394,4 +409,39 @@ body {
 
 .footer__top-text {
   margin-right: 15px;
+}
+
+@media (max-width: 1200px) {
+  .slide {
+    background-size: cover;
+  }
+  .card-3 {
+    background-size: cover;
+  }
+}
+@media (max-width: 992px) {
+  .slider__nav {
+    display: none;
+  }
+  .footer__copyright {
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .slide__title {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .card {
+    background-position: left top;
+    padding: 30px;
+    min-height: 300px;
+  }
+  .card-4 {
+    background-position: right top;
+  }
+  .footer__menu {
+    display: block;
+  }
 }
